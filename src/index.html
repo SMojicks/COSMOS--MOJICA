@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos - Home</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="bg-black py-7 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="flex justify-between items-center">
+          <div class="logo flex items-center">
+            <div class="logo__image">
+              <img class="size-15" src="../img/icon.png" alt="" />
+            </div>
+            <div>
+              <h2 class="text-white">COSMOS</h2>
+            </div>
+          </div>
+          <nav class="headerNav text-white font-secondary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="mission.html">Missions</a></li>
+              <li><a href="">Spacecraft</a></li>
+              <li><a href="">Gallery</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- banner -->
+    <section
+      class="relative w-full h-200 flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 -z-10">
+        <img
+          class="w-full h-full object-cover"
+          src="../img/home-banner.png"
+          alt=""
+        />
+      </div>
+      <div class="container relative text-center items-center z-10">
+        <div>
+          <h6
+            class="text-primary bg-primary/10 border border-primary rounded-4xl py-3 px-10 w-fit mx-auto"
+          >
+            Exploring the Unknown
+          </h6>
+        </div>
+
+        <h1
+          class="p-5 font-bold bg-gradient-to-r from-white to-primary bg-clip-text text-transparent"
+        >
+          Journey Beyond the Stars
+        </h1>
+        <p
+          class="mt-5 mb-10 font-secondary text-2xl text-white/50 leading-8 md:w-1/2 md:text-center md:mx-auto"
+        >
+          Discover the next generation of space exploration. From Mars missions
+          to deep . space telescopes, we're.pushing the boundaries of human
+          knowledge.
+        </p>
+        <!-- banner button -->
+        <div class="block text-center items-center">
+          <button class="btn btn--primary mr-5 font-bold">
+            View Missions →
+          </button>
+
+          <button class="btn btn--no-bg font-bold">Our Fleet</button>
+          <!-- wrapper -->
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stats card section -->
+    <section class="py-15 md:pb-20 md:pt-30">
+      <div class="container">
+        <!-- wrapper -->
+        <div
+          class="flex flex-col md:flex-row md: justify-center md:gap-5 gap text-center"
+        >
+          <!-- stats card -->
+          <div class="statsCard">
+            <h1 class="text-primary mb-2">150+</h1>
+            <p class="text-secondary">Missions Completed</p>
+          </div>
+          <div class="statsCard">
+            <h1 class="text-primary mb-2">12</h1>
+            <p class="text-secondary">Active Spacecraft</p>
+          </div>
+          <div class="statsCard">
+            <h1 class="text-primary mb-2">4.2B</h1>
+            <p class="text-secondary">Km Traveled</p>
+          </div>
+          <div class="statsCard">
+            <h1 class="text-primary mb-2">28</h1>
+            <p class="text-secondary">Countries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-12 md:py-8 border-t border-t-white/30">
+      <div class="container">
+        <!-- wrapper -->
+        <div
+          class="flex flex-col justify-center items-center text-center md:flex-row md:justify-between"
+        >
+          <div class="logo flex items-center">
+            <div class="logo__image">
+              <img class="size-15" src="../img/icon.png" alt="" />
+            </div>
+            <div>
+              <h2 class="text-white">COSMOS</h2>
+            </div>
+          </div>
+          <ul class="text-secondary flex justify-between gap-10">
+            <li><a href="">Home</a></li>
+            <li><a href="">Missions</a></li>
+            <li><a href="">Spacecraft</a></li>
+            <li><a href="">Gallery</a></li>
+          </ul>
+          <ul class="social-media-icons flex gap-5 my-5">
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-secondary font-secondary text-center">
+          <p
+            class="relative pt-8 mt-8 before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-110 md:before:w-400 before:h-[1px] before:bg-white/30"
+          >
+            &copy; 2026 Cosmos Space Exploration. All rights reserved.
+          </p>
+          <p class="italic">Designed by Seb</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
