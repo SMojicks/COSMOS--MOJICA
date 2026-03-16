@@ -105,6 +105,7 @@
   --color-secondary: #a0a0a0;
   --color-dark: #0a0a0f;
   --color-purple: #16213e;
+  --color-indigo:#1a1a2e;
 }
 
 @layer base {
@@ -182,7 +183,7 @@
     @apply inline-block text-white py-5 px-10 font-secondary rounded-4xl;
   }
   .btn--primary {
-    @apply bg-primary shadow-primary;
+    @apply bg-primary shadow-[#F0565C]/40 shadow-lg;
   }
   .btn--no-bg {
     @apply bg-none border-2 border-white/40;
@@ -193,5 +194,67 @@
   }
   .social-media-icons li {
     @apply text-secondary border rounded-full p-2 w-10 h-10;
+  }
+  .missionObjectives{
+    @apply relative
+  }
+  .missionObjectives:after{
+    @apply  absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2;
+  }
+  .keyAchievements{
+    @apply relative;
+  }
+  .keyAchievements p{
+    @apply text-secondary;
+  }
+  .keyAchievements:after{
+    @apply  absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2;
+  }
+  .achievementImages{
+    @apply flex flex-col gap-5 mt-10;
+  }
+  .achievementImages img{
+    @apply w-full h-70 rounded-2xl object-cover;
+  }
+  .technicalSpecs{
+    @apply relative;
+  }
+  .technicalSpecs:after{
+    @apply  absolute content-[''] h-0.5 w-70 bg-primary/40 top-10 mt-2;
+  }
+  .currentStatus{
+    @apply relative;
+  }
+  .currentStatus:after{
+    @apply  absolute content-[''] h-0.5 w-70 bg-primary/40 top-10 mt-2;
+  }
+
+  .tags{
+    @apply relative;
+  }
+  .tags:before{
+    @apply absolute content-[""] h-px w-113 bg-white/30;
+  }
+  .tags li{
+    @apply border border-secondary bg-secondary/10 text-secondary rounded-3xl px-5 py-2;
+  }
+
+  .spacecraftCard{
+    @apply bg-secondary/10 rounded-xl px-4 py-4 border border-secondary/10;
+  }
+  .contactForm{
+    @apply bg-indigo text-secondary p-10 rounded-3xl border border-secondary/10;
+  }
+  .contactForm input{
+    @apply  bg-secondary/10 border border-secondary/20  rounded-xl p-3  mt-2 mb-5;
+  }
+  .contactForm textarea{
+    @apply bg-secondary/10 border border-secondary/20 rounded-xl p-3  mt-2 mb-10 h-40;
+  }
+  .galleryImages{
+    @apply flex flex-col gap-5 my-15;
+  }
+  .galleryImages img{
+    @apply  w-full h-60 rounded-2xl object-cover;
   }
 }

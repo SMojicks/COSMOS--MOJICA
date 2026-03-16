@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos - Mission</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="bg-black py-7 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="flex justify-between items-center">
+          <div class="logo flex items-center">
+            <div class="logo__image">
+              <img class="size-15" src="../img/icon.png" alt="" />
+            </div>
+            <div>
+              <h3 class="text-white">COSMOS</h3>
+            </div>
+          </div>
+          <nav class="headerNav text-white font-secondary">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="mission.html">Missions</a></li>
+              <li><a href="">Spacecraft</a></li>
+              <li><a href="">Gallery</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- banner -->
+    <section class="relative pt-50 min-h-screen pb-24 overflow-hidden">
+      <div class="absolute inset-0 -z-10 w-full h-full">
+        <img
+          class="w-full h-full object-cover"
+          src="../img/mission-banner.png"
+          alt=""
+        />
+      </div>
+      <div class="container">
+        <div class="text-center">
+          <h1 class="text-white">Cosmis Gallery</h1>
+          <p class="text-secondary">
+            Breathtaking images from across the universe captured by our
+            missions and observatories.
+          </p>
+        </div>
+        <!-- wrapper -->
+        <div class="">
+          <!-- gallery images -->
+          <div class="galleryImages md:grid md:grid-cols-2">
+            <img class="md:h-full" src="../img/gallery1.jfif" alt="" />
+            <div class="md:flex md:flex-col md:gap-5">
+
+              <div class=" flex flex-col md:flex md:flex-row gap-5">
+                <img src="../img/gallery2.jfif" alt="" />
+                <img src="../img/gallery3.jfif" alt="" />
+              </div>
+
+              <img class="hidden md:block" src="../img/gallery1.jfif" alt="" />
+            </div>
+            <div class="flex flex-col md:flex-row gap-5 md:px-5">
+              <img class="md:h-150 md:w-1/2"
+              src="../img/gallery4.jfif" alt="" />
+              <img class="md:h-80 md:w-1/2"
+              src="../img/gallery5.jfif" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-12 md:py-8 border-t border-t-white/30">
+      <div class="container">
+        <div
+          class="flex flex-col justify-center items-center text-center md:flex-row md:justify-between"
+        >
+          <div class="logo flex items-center">
+            <div class="logo__image">
+              <img class="size-15" src="../img/icon.png" alt="" />
+            </div>
+            <div>
+              <h3 class="text-white">COSMOS</h3>
+            </div>
+          </div>
+          <ul class="text-secondary flex justify-between gap-10">
+            <li><a href="">Home</a></li>
+            <li><a href="">Missions</a></li>
+            <li><a href="">Spacecraft</a></li>
+            <li><a href="">Gallery</a></li>
+          </ul>
+          <ul class="social-media-icons flex gap-5 my-5">
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="text-secondary font-secondary text-center">
+          <p
+            class="relative pt-8 mt-8 before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-110 md:before:w-400 before:h-[1px] before:bg-white/30"
+          >
+            &copy; 2026 Cosmos Space Exploration. All rights reserved.
+          </p>
+          <p class="italic">Designed by Seb</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
