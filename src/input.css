@@ -105,7 +105,7 @@
   --color-secondary: #a0a0a0;
   --color-dark: #0a0a0f;
   --color-purple: #16213e;
-  --color-indigo:#1a1a2e;
+  --color-indigo: #1a1a2e;
 }
 
 @layer base {
@@ -161,23 +161,50 @@
 }
 
 @layer components {
+.header {
+    @apply fixed w-full top-0 z-50; /* Added z-50 so header stays on top */
+  }
+
+  /* 1. The Container: Removed the translate-y-[50rem] trap */
+.headerNav {
+    /* Mobile styles (Fixed sidebar, hidden on the right) */
+    @apply  h-screen w-full fixed -right-full top-0 z-[40] flex flex-col text-center transition-all duration-500 ease-in-out pt-24 gap-12
+    
+    /* Desktop styles (Reset to normal static layout) */
+    md:static md:h-auto md:w-auto md:flex-row md:bg-transparent md:p-0;
+  }
+
+  /* 2. The Open State */
+  .headerNav.open {
+    @apply right-0; 
+    /* No need to repeat transition-all here, the base class handles it! */
+  }
+
+  /* 3. The Links: Removed fixed, h-0, and opacity-0 for mobile so they actually show up */
   .headerNav ul {
-    @apply flex flex-col gap-10 fixed w-full top-26 text-left items-start overflow-hidden right-0 h-0 opacity-0 duration-300 font-bold
-        /* tablet-desktop */
-        md:opacity-100 md:flex-row md:items-center md:top-auto md:h-auto md:static md:shadow-none;
+    @apply flex flex-col gap-10 text-center font-bold bg-indigo mt-5 p-10 h-full
+    /* tablet-desktop */
+    md:flex-row md:items-center md:static md:w-auto md:h-auto md:mt-0 md:p-2 md:bg-transparent;
   }
 
   .toggleMenu {
-    @apply mx-5 md:hidden;
+    @apply mx-5 md:hidden z-[60] relative cursor-pointer; /* z-index ensures it stays above the open menu */
   }
+
   .toggleMenu span {
-    @apply block my-1 w-8 h-1 rounded-xl bg-white items-center justify-center;
+    @apply block my-1 w-8 h-1 rounded-xl bg-white transition-all duration-300;
   }
+
   .toggleMenu.open span:first-child {
-    @apply w-7 h-1 duration-100;
+    @apply w-8 translate-y-[8px] rotate-[225deg];
   }
+
+  .toggleMenu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+
   .toggleMenu.open span:last-child {
-    @apply w-10 h-1 duration-100;
+    @apply w-8 -translate-y-[8px] -rotate-[225deg];
   }
   .btn {
     @apply inline-block text-white py-5 px-10 font-secondary rounded-4xl;
@@ -195,66 +222,66 @@
   .social-media-icons li {
     @apply text-secondary border rounded-full p-2 w-10 h-10;
   }
-  .missionObjectives{
-    @apply relative
-  }
-  .missionObjectives:after{
-    @apply  absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2;
-  }
-  .keyAchievements{
+  .missionObjectives {
     @apply relative;
   }
-  .keyAchievements p{
+  .missionObjectives:after {
+    @apply absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2 md:mt-8 md:w-87;
+  }
+  .keyAchievements {
+    @apply relative;
+  }
+  .keyAchievements p {
     @apply text-secondary;
   }
-  .keyAchievements:after{
-    @apply  absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2;
+  .keyAchievements:after {
+    @apply absolute content-[''] h-0.5 w-55 bg-primary/40 top-10 mt-2 md:mt-8 md:w-85;
   }
-  .achievementImages{
+  .achievementImages {
     @apply flex flex-col gap-5 mt-10;
   }
-  .achievementImages img{
+  .achievementImages img {
     @apply w-full h-70 rounded-2xl object-cover;
   }
-  .technicalSpecs{
+  .technicalSpecs {
     @apply relative;
   }
-  .technicalSpecs:after{
-    @apply  absolute content-[''] h-0.5 w-70 bg-primary/40 top-10 mt-2;
+  .technicalSpecs:after {
+    @apply absolute content-[''] h-0.5 w-70 bg-primary/40 top-10 mt-2 md:mt-8 md:w-113;
   }
-  .currentStatus{
+  .currentStatus {
     @apply relative;
   }
-  .currentStatus:after{
-    @apply  absolute content-[''] h-0.5 w-70 bg-primary/40 top-10 mt-2;
+  .currentStatus:after {
+    @apply absolute content-[''] h-0.5 w-43 bg-primary/40 top-10 mt-2 md:mt-8 md:w-67;
   }
 
-  .tags{
+  .tags {
     @apply relative;
   }
-  .tags:before{
+  .tags:before {
     @apply absolute content-[""] h-px w-113 bg-white/30;
   }
-  .tags li{
+  .tags li {
     @apply border border-secondary bg-secondary/10 text-secondary rounded-3xl px-5 py-2;
   }
 
-  .spacecraftCard{
+  .spacecraftCard {
     @apply bg-secondary/10 rounded-xl px-4 py-4 border border-secondary/10;
   }
-  .contactForm{
+  .contactForm {
     @apply bg-indigo text-secondary p-10 rounded-3xl border border-secondary/10;
   }
-  .contactForm input{
-    @apply  bg-secondary/10 border border-secondary/20  rounded-xl p-3  mt-2 mb-5;
+  .contactForm input {
+    @apply bg-secondary/10 border border-secondary/20  rounded-xl p-3  mt-2 mb-5;
   }
-  .contactForm textarea{
+  .contactForm textarea {
     @apply bg-secondary/10 border border-secondary/20 rounded-xl p-3  mt-2 mb-10 h-40;
   }
-  .galleryImages{
+  .galleryImages {
     @apply flex flex-col gap-5 my-15;
   }
-  .galleryImages img{
-    @apply  w-full h-60 rounded-2xl object-cover;
+  .galleryImages img {
+    @apply w-full h-60 rounded-2xl object-cover;
   }
 }
